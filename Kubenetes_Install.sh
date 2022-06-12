@@ -31,14 +31,7 @@ sudo modprobe br_netfilter
 sudo sysctl net.bridge.bridge-nf-call-iptables=1
 
 # Changing Docker Cgroup Driver
-# By default, Docker installs with “cgroupfs” as the cgroup driver. Kubernetes recommends that Docker should run with “systemd” as the driver. If you skip thi
-# s step and try to initialize the kubeadm in the next step, you will get the following warning in your terminal:
-
-# [preflight] Running pre-flight checks
-#    [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://
-kubernetes.io/docs/setup/cri/
-
-# On both master and worker nodes, update the cgroupdriver with the following commands:
+# By default, Docker installs with “cgroupfs” as the cgroup driver. Kubernetes recommends that Docker should run with “systemd” as the driver. On both master and worker nodes, update the cgroupdriver with the following commands:
 
 sudo mkdir /etc/docker
 cat <<EOF | sudo tee /etc/docker/daemon.json
