@@ -1,5 +1,3 @@
-#!/bin/bash
-
 sudo apt update
 
 # installing the apt-transport-https package which enables working with http and https in Ubuntu’s repositories. Also, install curl as it will be necessary for the next steps.
