@@ -1,7 +1,8 @@
- kub_install.sh
 #!/bin/bash
-# installing the apt-transport-https package which enables working with http and https in Ubuntu’s repositories. Also, install curl as it will be necessary fo
-r the next steps.
+
+sudo apt update
+
+# installing the apt-transport-https package which enables working with http and https in Ubuntu’s repositories. Also, install curl as it will be necessary for the next steps.
 sudo apt install -y apt-transport-https curl
 
 # Then, add the Kubernetes signing key to both nodes by executing the command:
